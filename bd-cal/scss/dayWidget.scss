@@ -1,0 +1,63 @@
+.day-container {
+  border: solid 1px #ccc;
+  display: inline-flex;
+  //2px extra to accomodate for border
+  width: 182px;
+  height: 232px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-direction: column;
+  margin-right: 10px;
+  .day-label {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+    background: #ab9def;
+    color: #dee4e6;
+  }
+  .bd-container {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: auto;
+  }
+  &.no-bd {
+    .bd-container {
+      background: url(../img/no-dates.png);
+      background-size: cover;
+    }
+  }
+  .bd-element {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .bd-hidden-name {
+        display: block;
+      }
+    }
+  }
+  .bd-hidden-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%, -50%);
+    white-space: nowrap;
+    z-index: 1;
+    background: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: #000;
+    display: none;
+    &.right-display {
+      left: auto;
+      right: 50%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "./dayWidget.scss";
+@import "./workArea.scss";
+
+*,
+:before,
+:after {
+  /* Include the content box as well as padding and border for precise definitions */
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #eaf0f2;
+}
